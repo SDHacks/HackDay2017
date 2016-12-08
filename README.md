@@ -1,11 +1,12 @@
 # HackDay2017
 The main page for Hack Day 2017
 
-## How to SASS
-Since this is static, all we need is SASS, so run this:
+## How to build SASS
+Since this is static, we must compile the SASS, so run this:
 
 ```
-sass --watch scss/main.scss:css/stylesheet.css
+npm install
+gulp
 ```
 
 ## Link to Mockup:

@@ -1,9 +1,7 @@
-/* Font imports */
+// Font imports 
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi|Source+Sans+Pro');
 
-/* Should we move to SASS??? */
-
-/* CSS Resets */
+// Some CSS Resets
 html, 
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
@@ -11,13 +9,10 @@ body {
   margin: 0;
   padding: 0;
 }
-
-/* Other global styles */
+// Some global styles
 h1,
 h2,
 h3,
 h4 {
   font-family: "Reem Kufi", Helvetica, Arial, sans-serif;
 }
-
-/* Hero */

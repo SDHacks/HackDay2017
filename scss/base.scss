@@ -20,22 +20,6 @@ h4 {
   font-family: $REEM_KUFI;
 }
 // Todo: externalize these into different files
-// Hero
-.sd-hero {
-  text-align: center;
-  color: white;
-  background-color: $PURPLE_1;
-
-  &--title {
-    font-size: 72px;
-    letter-spacing: 1px;
-  }
-  &--subtitle {
-    font-family: $SOURCE_SANS;
-    font-size: 44px;
-    letter-spacing: 1.67px;
-  }
-}
 // Button styles
 .sd-button {
   // Todo: semibold
@@ -52,6 +36,34 @@ h4 {
     background-color: $GREEN_1;
   }
 }
+// Hero
+.sd-hero {
+  text-align: center;
+  color: white;
+  background-color: $PURPLE_1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &--title {
+    font-size: 72px;
+    letter-spacing: 1px;
+  }
+  &--subtitle {
+    font-family: $SOURCE_SANS;
+    font-size: 44px;
+    letter-spacing: 1.67px;
+  }
+  &--logo {
+    max-width: 224px;
+    margin-bottom: 20px;
+  }
+  .sd-button {
+    margin: 10px;
+  }
+}
+
 // Overall styles
 .sd-section {
   &--header {
@@ -68,6 +80,23 @@ h4 {
   li {
     font-size: 28px;
     line-height: 1.4;
+  }
+}
+.sd-list {
+  list-style-type: none;
+  margin-left: 0;
+}
+.sd-schedule {
+  &--list {
+    font-family: $REEM_KUFI;
+    letter-spacing: 1px;
+
+    li {
+      margin-bottom: 14px;
+    }
+  }
+  &--list-time {
+    margin-right: 50px;
   }
 }
 // Hexagon stuff

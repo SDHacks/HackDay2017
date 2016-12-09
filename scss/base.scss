@@ -134,14 +134,17 @@ h4 {
     background-position: -595px 0;
   }
   &--content {
-    margin: 35px 45px 0;
+    margin: 35px 0 0 45px;
     p {
       font-size: 1.8em;
     }
   }
+  &--left &--content {
+    margin: 35px 45px 0 0;
+  }
   &--header {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2.25em;
   }
 }
 .sd-hex {

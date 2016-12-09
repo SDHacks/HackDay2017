@@ -1,18 +1,142 @@
 // Font imports 
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi|Source+Sans+Pro');
 
+$SOURCE_SANS: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$REEM_KUFI: "Reem Kufi", Helvetica, Arial, sans-serif;
 // Some CSS Resets
 html, 
 body {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-family: $SOURCE_SANS;
   font-size: 100%;
   margin: 0;
   padding: 0;
+  color: $GRAY_1;
 }
 // Some global styles
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Reem Kufi", Helvetica, Arial, sans-serif;
+  font-family: $REEM_KUFI;
+}
+// Todo: externalize these into different files
+// Button styles
+.sd-button {
+  // Todo: semibold
+  width: 216px;
+  line-height: 54px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0;
+  border-radius: 10px;
+  background-color: $BLUE_1;
+
+  &.success {
+    background-color: $GREEN_1;
+  }
+}
+// Hero
+.sd-hero {
+  text-align: center;
+  color: white;
+  background-color: $PURPLE_1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &--title {
+    font-size: 72px;
+    letter-spacing: 1px;
+  }
+  &--subtitle {
+    font-family: $SOURCE_SANS;
+    font-size: 44px;
+    letter-spacing: 1.67px;
+  }
+  &--logo {
+    max-width: 224px;
+    margin-bottom: 20px;
+  }
+  .sd-button {
+    margin: 10px;
+  }
+}
+
+// Overall styles
+.sd-section {
+  &--header {
+    font-size: 54px;
+    letter-spacing: 1.5px;
+    color: $BLUE_1;
+  }
+  &--subheader {
+    font-size: 36px;
+    letter-spacing: 1px;
+    color: $BLUE_1;
+  }
+  p, 
+  li {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+}
+.sd-list {
+  list-style-type: none;
+  margin-left: 0;
+}
+.sd-schedule {
+  &--list {
+    font-family: $REEM_KUFI;
+    letter-spacing: 1px;
+
+    li {
+      margin-bottom: 14px;
+    }
+  }
+  &--list-time {
+    margin-right: 50px;
+  }
+}
+.sd-faq {
+  &--list {
+    li {
+      margin: 26px 0;
+    }
+  }
+}
+// Hexagon stuff
+.sd-hextion {
+  background-color: $PURPLE_1;
+  color: white;
+}
+.sd-hex {
+  background: url("../images/hexagon_rounded.svg");
+  background-size: cover;
+  width: 274px;
+  height: 301px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+  &--unbordered {
+    background: url("../images/hexagon_unbordered.svg");
+    background-size: cover;
+  }
+  h2 {
+    font-size: 96px;
+    line-height: 86px;
+    margin: 12px 0 0 0;
+  }
+  p {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+// Footer
+.sd-footer {
+  background-color: $PURPLE_1;
 }

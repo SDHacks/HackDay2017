@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   color: $GRAY_1;
+  background-color: $PURPLE_1;
 }
 // Some global styles
 h1,
@@ -18,6 +19,9 @@ h2,
 h3,
 h4 {
   font-family: $REEM_KUFI;
+}
+.sd-white-bg {
+  background-color: $WHITE;
 }
 // Todo: externalize these into different files
 // Button styles
@@ -39,6 +43,7 @@ h4 {
 // Hero
 .sd-hero {
   text-align: center;
+  width: 100%;
   color: white;
   background-color: $PURPLE_1;
   height: 120vh;
@@ -68,8 +73,10 @@ h4 {
 
 // Overall styles
 .sd-section {
-  margin-top: 75px;
-  
+
+  .row.sd-white-bg {
+    padding-top: 75px;
+  }
   &--header {
     font-size: 54px;
     letter-spacing: 1.5px;
@@ -123,18 +130,15 @@ h4 {
     margin-top: -250px;
     margin-bottom: -250px;
   }
-
   &--left {
     background-position: -595px 0;
   }
-
   &--content {
     margin: 35px 45px 0;
     p {
       font-size: 1.8em;
     }
   }
-
   &--header {
     text-align: center;
     font-size: 1.8em;
@@ -155,6 +159,9 @@ h4 {
   &--unbordered {
     background: url("../images/hexagon_unbordered.svg");
     background-size: cover;
+  }
+  &--inset {
+    margin-top: 100px;
   }
 
   h2 {
@@ -180,12 +187,19 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
 
     background-color: $PURPLE_1;
     clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
   }
-
+  &--background-helper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 100px;
+    background-color: $WHITE;
+    z-index: -1;
+  }
   &--hex {
     background-image: url("../images/logo.png");
     background-size: cover;
@@ -194,9 +208,11 @@ h4 {
     position: absolute;
     top: -40px;
     right: 50px;
+    z-index: 1;
   }
-
   &--info {
+    position: relative;
+    z-index: 1;
     height: 50px;
   }
 }

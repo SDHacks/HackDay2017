@@ -1,3 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Source+Sans+Pro");html,body{font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;font-size:100%;margin:0;padding:0}h1,h2,h3,h4{font-family:"Reem Kufi", Helvetica, Arial, sans-serif}
+/* Colors */
+/* Breakpoints */
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Source+Sans+Pro");
+html,
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Reem Kufi", Helvetica, Arial, sans-serif; }
+
+.sd-hero {
+  color: white;
+  background-color: #4E3863; }
 
 /*# sourceMappingURL=main.css.map */

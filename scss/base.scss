@@ -99,8 +99,44 @@ h4 {
     margin-right: 50px;
   }
 }
+.sd-faq {
+  &--list {
+    li {
+      margin: 26px 0;
+    }
+  }
+}
 // Hexagon stuff
 .sd-hextion {
   background-color: $PURPLE_1;
   color: white;
+}
+.sd-hex {
+  background: url("../images/hexagon_rounded.svg");
+  background-size: cover;
+  width: 274px;
+  height: 301px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+  &--unbordered {
+    background: url("../images/hexagon_unbordered.svg");
+    background-size: cover;
+  }
+  h2 {
+    font-size: 96px;
+    line-height: 86px;
+    margin: 12px 0 0 0;
+  }
+  p {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+// Footer
+.sd-footer {
+  background-color: $PURPLE_1;
 }

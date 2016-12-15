@@ -46,36 +46,63 @@ h4 {
   width: 100%;
   color: white;
   background-color: $PURPLE_1;
-  height: 120vh;
+  min-height: 112vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  margin-bottom: 10em;
+  margin-bottom: 4vh;
 
+  @media screen and (max-width: $BP_MOBILE) {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  &--content {
+    position: relative;
+    top: -6vh;
+
+    @media screen and (max-width: $BP_MOBILE) {
+      top: 0;
+      padding-bottom: 15vh;
+    }
+  }
   &--title {
     font-size: 72px;
     letter-spacing: 1px;
+
+    @media screen and (max-width: $BP_MOBILE) {
+      font-size: 64px;
+      margin-bottom: 0;
+    }
   }
   &--subtitle {
     font-family: $SOURCE_SANS;
     font-size: 44px;
     letter-spacing: 1.67px;
+
+    @media screen and (max-width: $BP_MOBILE) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
   &--logo {
     max-width: 224px;
     margin-bottom: 20px;
   }
   .sd-button {
-    margin: 10px;
+    margin: 6px 10px;
+
+    @media screen and (max-width: $BP_MOBILE) {
+      width: 80%;
+    }
   }
 }
 
 // Overall styles
 .sd-section {
-
   .row.sd-white-bg {
-    padding-top: 75px;
+    @media screen and (min-width: $BP_MOBILE) {
+      padding-top: 75px;
+    }
   }
   &--header {
     font-size: 54px;
@@ -120,27 +147,37 @@ h4 {
 // Hexagon stuff
 .sd-hextion {
   height: 1100px;
-  width: 440px;
   color: white;
   background: url("../images/side-hexagons.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   &--shifted {
     margin-top: -250px;
     margin-bottom: -250px;
+
+    @media screen and (max-width: $BP_MOBILE) {
+      margin-top: -100px;
+      margin-bottom: -100px;
+      // Remove soft corner
+      background-position: -30px 0;
+    }
   }
   &--left {
     background-position: -595px 0;
   }
   &--content {
-    margin: 35px 0 0 45px;
+    @media screen and (min-width: $BP_MOBILE) {
+      margin: 35px 0 0 45px;
+    }
     p {
       font-size: 1.8em;
     }
   }
   &--left &--content {
+    @media screen and (min-width: $BP_MOBILE) {
     margin: 35px 45px 0 0;
+  }
   }
   &--header {
     text-align: center;

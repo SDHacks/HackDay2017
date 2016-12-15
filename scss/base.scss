@@ -36,8 +36,18 @@ h4 {
   border-radius: 10px;
   background-color: $BLUE_1;
 
+  // Override foundation button hover behavior
+  &:hover,
+  &:focus {
+    background-color: $BLUE_1;
+  }
   &.success {
     background-color: $GREEN_1;
+
+    &.success:hover,
+    &.success:focus {
+      background-color: $GREEN_1;
+    }
   }
 }
 // Hero

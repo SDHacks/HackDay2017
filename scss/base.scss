@@ -20,6 +20,14 @@ h3,
 h4 {
   font-family: $REEM_KUFI;
 }
+a {
+  color: $BLUE_1;
+  border-bottom: 2px solid;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
 .sd-white-bg {
   background-color: $WHITE;
 }
@@ -193,6 +201,7 @@ h4 {
   &--list-time {
     font-weight: bold;
     position: absolute;
+    color: $PURPLE_1;
     left: 0;
   }
   &--list-content {
@@ -231,7 +240,7 @@ h4 {
   @media screen and (max-width: $BP_MD) {
     background: $PURPLE_1;
     height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     padding-top: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -367,6 +376,20 @@ h4 {
     z-index: 1;
     height: 50px;
   }
+  &--links {
+    z-index: 2;
+    text-align: center;
+  }
+  &--list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 10px;
+      display: inline-block;
+    }
+  }
 }
 .sd-spacer--footer {
   height: 200px;
@@ -391,10 +414,17 @@ h4 {
     li {
       padding-left: 0;
       display: inline-block;
-      padding: 10px 14px;
+      margin: 10px 14px;
+      font-size: 120%;
+      border-bottom: 2px solid;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
     }
     &>a {
       color: inherit;
+      border: none;
     }
   }
   &--fixed {

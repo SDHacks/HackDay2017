@@ -62,15 +62,32 @@ h4 {
   justify-content: center;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   margin-bottom: 4vh;
+  background: linear-gradient(rgba(78, 56, 99, 0.7), rgba(78, 56, 99, 0.7)), url("https://images.unsplash.com/photo-1474905187624-b3deaf7aa4c2") center center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: none !important;
 
-  @media screen and (max-width: $BP_MOBILE) {
+  @media screen and (max-width: $BP_MD) {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  &--wrap {
+    min-height: 112vh;
+    max-width: none !important;
+
+    .sd-white-bg {
+      min-height: 112vh;
+    }
   }
   &--content {
     position: relative;
     top: -6vh;
 
-    @media screen and (max-width: $BP_MOBILE) {
+    @media screen and (max-width: $BP_MD) {
       top: 0;
       padding-bottom: 15vh;
     }
@@ -79,7 +96,7 @@ h4 {
     font-size: 72px;
     letter-spacing: 1px;
 
-    @media screen and (max-width: $BP_MOBILE) {
+    @media screen and (max-width: $BP_MD) {
       font-size: 64px;
       margin-bottom: 0;
     }
@@ -89,7 +106,7 @@ h4 {
     font-size: 44px;
     letter-spacing: 1.67px;
 
-    @media screen and (max-width: $BP_MOBILE) {
+    @media screen and (max-width: $BP_MD) {
       font-size: 30px;
       line-height: 40px;
     }
@@ -101,7 +118,7 @@ h4 {
   .sd-button {
     margin: 6px 10px;
 
-    @media screen and (max-width: $BP_MOBILE) {
+    @media screen and (max-width: $BP_MD) {
       width: 80%;
     }
   }
@@ -109,8 +126,20 @@ h4 {
 
 // Overall styles
 .sd-section {
+  position: relative;
+
+  &.row,
+  .row {
+    max-width: 90rem;
+  }
+  .row {
+    @media screen and (min-width: $BP_XL) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
   .row.sd-white-bg {
-    @media screen and (min-width: $BP_MOBILE) {
+    @media screen and (min-width: $BP_MD) {
       padding-top: 75px;
     }
   }
@@ -156,6 +185,17 @@ h4 {
     left: 250px;
     display: block;
   }
+  @media screen and (max-width: $BP_XL) {
+    li {
+      height: auto;
+    }
+    &--list-time,
+    &--list-content {
+      line-height: 30px;
+      display: block;
+      position: static;
+    }
+  }
 }
 .sd-faq {
   &--list {
@@ -171,23 +211,38 @@ h4 {
   background: url("../images/side-hexagons.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
 
   &--shifted {
     margin-top: -250px;
     margin-bottom: -250px;
 
-    @media screen and (max-width: $BP_MOBILE) {
+    @media screen and (max-width: $BP_MD) {
       margin-top: -100px;
       margin-bottom: -100px;
       // Remove soft corner
       background-position: -30px 0;
     }
   }
+  &--right {
+    @media screen and (min-width: $BP_XL) {
+      position: relative;
+      left: 6.2rem;
+      padding-right: 10px;
+    }
+  }
   &--left {
     background-position: -595px 0;
+
+    @media screen and (min-width: $BP_XL) {
+      background-position: -540px 0;
+      position: relative;
+      left: -6.2rem;
+      padding-left: 10px;
+    }
   }
   &--content {
-    @media screen and (min-width: $BP_MOBILE) {
+    @media screen and (min-width: $BP_MD) {
       margin: 35px 0 0 45px;
     }
     p {
@@ -195,13 +250,18 @@ h4 {
     }
   }
   &--left &--content {
-    @media screen and (min-width: $BP_MOBILE) {
+    @media screen and (min-width: $BP_MD) {
     margin: 35px 45px 0 0;
   }
   }
   &--header {
     text-align: center;
     font-size: 2.25em;
+  }
+  .button {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
   }
 }
 .sd-hex {

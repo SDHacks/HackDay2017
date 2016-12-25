@@ -5,7 +5,8 @@
   <title>Hack Day 2017</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.css" integrity="sha256-NqI559iHqiWe5VxDi9mXE8i83ghn8Ru8BINyiPN7lDg=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/foundation.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.css" integrity="sha256-NqI559iHqiWe5VxDi9mXE8i83ghn8Ru8BINyiPN7lDg=" crossorigin="anonymous" /> -->
   <link href="css/main.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.js" integrity="sha256-6Po73qUOfEfrvKtDy88HN0Xx6wjx3ZlngccJjsIVpIg=" crossorigin="anonymous"></script>
@@ -14,10 +15,28 @@
   <div class="off-canvas-wrapper wrapper">
     <div class="off-canvas-wrapper-inner wrapper--inner">
       <!-- TODO: add fixed nav bar -->
+<!--       <div class="sd-nav sd-nav--fixed">
+        <ul class="sd-nav--list">
+          <a href="#about"><li>About</li></a>
+          <a href="#resources"><li>Resources</li></a>
+          <a href="#schedule"><li>Schedule</li></a>
+          <a href="#faq"><li>FAQ</li></a>
+          <li><a href="" class="sd-button button">Apply</a></li>
+        </ul>
+      </div> -->
+
+      <div class="sd-nav sd-nav--static">
+        <ul class="sd-nav--list">
+          <a href="#about"><li>About</li></a>
+          <a href="#resources"><li>Resources</li></a>
+          <a href="#schedule"><li>Schedule</li></a>
+          <a href="#faq"><li>FAQ</li></a>
+          <li><a href="" class="sd-button button">Apply</a></li>
+        </ul>
+      </div>
 
       <!-- Hero section -->
-      <div class="sd-section sd-hero--wrap">
-        <!-- TODO: add static nav bar -->
+      <div class="sd-section sd-hero--wrap" id="hero">        
         <div class="sd-white-bg row">
           <div class="sd-hero ">
             <div class="small-12 sd-hero--content columns">
@@ -35,7 +54,7 @@
       </div>
 
       <!-- First info section -->
-      <div class="sd-section sd-z1">
+      <div class="sd-section sd-z1" id="about">
         <div class="row sd-white-bg sd-pad-top">
           <div class="small-12 medium-6 large-7 columns sd-section sd-section--content">
             <h2 class="sd-section--header">About</h2>
@@ -63,7 +82,7 @@
       </div>
 
       <!-- Second (split content) info section -->
-      <div class="sd-section">
+      <div class="sd-section" id="resources">
         <div class="row sd-white-bg">
           <div class="small-12 columns">
             <h2 class="sd-section--header">Resources</h2>
@@ -108,7 +127,7 @@
       </div>
 
       <!-- Schedule section -->
-      <div class="sd-section">
+      <div class="sd-section" id="schedule">
         <div class="row sd-white-bg">
           <div class="small-12 medium-6 large-5 columns sd-hextion sd-hextion--left">
             <div class="sd-hex sd-hex--inset">
@@ -180,7 +199,7 @@
       </div>
 
       <!-- FAQ section -->
-      <div class="sd-section">
+      <div class="sd-section" id="faq">
         <div class="row sd-white-bg">
           <div class="small-12 medium-6 large-7 columns sd-section sd-section--content">
             <h2 class="sd-section--header">FAQ</h2>
@@ -270,7 +289,7 @@
           <div class="sd-footer--background"></div>
           <div class="sd-footer--hex"></div>
           <div class="sd-footer--background-helper"></div>
-          <div class="small-12 medium-offset-9 medium-2 columns sd-footer--info">
+          <div class="small-12 medium-offset-6 medium-4 columns sd-footer--info">
             <img class="tesc-logo" src="images/tesc_white.svg" />
           </div>
         </div>

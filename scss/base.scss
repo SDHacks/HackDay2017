@@ -138,13 +138,23 @@ h4 {
   &--list {
     font-family: $REEM_KUFI;
     letter-spacing: 1px;
+    margin: 10px 0 20px 0;
 
     li {
       margin-bottom: 14px;
+      position: relative;
+      height: 40px;
     }
   }
   &--list-time {
-    margin-right: 50px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  &--list-content {
+    position: absolute;
+    left: 250px;
+    display: block;
   }
 }
 .sd-faq {
@@ -265,4 +275,7 @@ h4 {
     z-index: 1;
     height: 50px;
   }
+}
+.sd-spacer--footer {
+  height: 200px;
 }

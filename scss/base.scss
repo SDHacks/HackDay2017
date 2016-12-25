@@ -143,6 +143,14 @@ h4 {
       padding-top: 75px;
     }
   }
+  &--content {
+    @media screen and (min-width: $BP_LG) {
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
   &--header {
     font-size: 54px;
     letter-spacing: 1.5px;
@@ -164,6 +172,9 @@ h4 {
   margin-left: 0;
 }
 .sd-schedule {
+  @media screen and (min-width: $BP_LG) {
+    margin-top: 8rem;
+  }
   &--list {
     font-family: $REEM_KUFI;
     letter-spacing: 1px;
@@ -213,6 +224,7 @@ h4 {
   background-repeat: no-repeat;
   z-index: 1;
 
+
   &--shifted {
     margin-top: -250px;
     margin-bottom: -250px;
@@ -228,7 +240,7 @@ h4 {
     @media screen and (min-width: $BP_XL) {
       position: relative;
       left: 6.2rem;
-      padding-right: 10px;
+      padding-right: 20px;
     }
   }
   &--left {
@@ -238,10 +250,15 @@ h4 {
       background-position: -540px 0;
       position: relative;
       left: -6.2rem;
-      padding-left: 10px;
+      padding-left: 35px;
     }
   }
   &--content {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     @media screen and (min-width: $BP_MD) {
       margin: 35px 0 0 45px;
     }
@@ -338,4 +355,10 @@ h4 {
 }
 .sd-spacer--footer {
   height: 200px;
+}
+.sd-pad-top {
+  padding-top: 4vh;
+}
+.sd-z1 {
+  z-index: 1;
 }

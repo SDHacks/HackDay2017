@@ -23,6 +23,10 @@
 
   @media screen and (max-width: $BP_MD) {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    display: block;
+    padding-top: 20px;
+    position: static;
+    min-height: 700px;
   }
   &--wrap {
     min-height: 112vh;
@@ -30,6 +34,9 @@
 
     .sd-white-bg {
       min-height: 112vh;
+    }
+    @media screen and (max-width: $BP_MD) {
+      height: auto;
     }
   }
   &--content {
@@ -63,6 +70,11 @@
   &--logo {
     max-width: 224px;
     margin-bottom: 20px;
+
+    @media screen and (max-width: $BP_LG) {
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
   }
   .sd-button {
     margin: 6px 10px;

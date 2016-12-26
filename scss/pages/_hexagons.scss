@@ -16,7 +16,17 @@
     margin-bottom: 50px;
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   }
+  &--centered {
+    text-align: center;
+  }
+  &--list {
+    // list-style-type: bullet;
 
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
   &--shifted {
     margin-top: -250px;
     margin-bottom: -250px;
@@ -98,6 +108,9 @@
     @media screen and (max-width: $BP_LG) {
       margin-top: 130px;
     }
+    @media screen and (max-width: $BP_MD) {
+      margin-top: 50px;
+    }
   }
 
   h2 {
@@ -117,5 +130,23 @@
   @media screen and (max-width: $BP_MD) {
     // width: 274px;
     // height: 301px;
+  }
+  &--wrapper {
+    // background-color: $PURPLE_1;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  &--hoz {
+    // For horizontal lists
+    width: 182px;
+    height: 200px;
+    display: inline-block;
+
+    h2 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 20px;
+    }
   }
 }

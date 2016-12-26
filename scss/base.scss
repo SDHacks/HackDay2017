@@ -439,6 +439,7 @@ a {
   }
   &--content {
     position: relative;
+    min-height: 68px;
   }
   &--logo {
     display: inline-block;

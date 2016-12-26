@@ -10,9 +10,9 @@ $(document).ready(function() {
     var toTop = $(window).scrollTop();
 
     if (toTop > 0) {
-      $(".sd-nav--fixed").slideDown();
+      $(".sd-nav--fixed").fadeIn();
     } else {
-      $(".sd-nav--fixed").slideUp();
+      $(".sd-nav--fixed").fadeOut();
     }
 
     for (var i=0; i<sectionIds.length; i++) {
@@ -20,10 +20,8 @@ $(document).ready(function() {
       if (toTop + TOTOP_OFFSET > $(currId).offset().top &&
           toTop + TOTOP_OFFSET < $(currId).offset().top + $(currId).height()) {
         $(".sd-nav--list a li").removeClass("active");
-        $("a[href='" + currId + "'] li").addClass("active");
+        $(".sd-nav--list a[href='" + currId + "'] li").addClass("active");
       }
     }
   });
-
-  // Todo: organize per section
 });

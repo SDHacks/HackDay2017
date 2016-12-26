@@ -10,7 +10,8 @@
   justify-content: center;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   margin-bottom: 4vh;
-  background: linear-gradient(rgba(78, 56, 99, 0.7), rgba(78, 56, 99, 0.7)), url("https://images.unsplash.com/photo-1474905187624-b3deaf7aa4c2") center center;
+  background: linear-gradient(rgba(78, 56, 99, 0.8), rgba(78, 56, 99, 0.8)),
+              url("../images/hero.jpg") center center;
   background-size: cover;
   position: absolute;
   left: 0;

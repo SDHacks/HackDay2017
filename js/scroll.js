@@ -4,7 +4,9 @@ var sectionIds = ["#about", "#resources", "#schedule", "#faq"];
 var TOTOP_OFFSET = 100;
 
 $(document).ready(function() {
-  $(".sd-nav--fixed").hide();
+  if ($(window).scrollTop() === 0) $(".sd-nav--fixed").hide();
+  if ($(window).scrollTop() + $(window).height()
+       > $(document).height() - 800) $(".sd-link-top").hide();
 
   $(window).scroll(function() {
     var toTop = $(window).scrollTop();
@@ -23,5 +25,18 @@ $(document).ready(function() {
         $(".sd-nav--list a[href='" + currId + "'] li").addClass("active");
       }
     }
+
+    if (toTop + $(window).height() > $(document).height() - 800) {
+      $(".sd-link-top").fadeIn();
+    } else {
+      $(".sd-link-top").fadeOut();
+    }
+  });
+
+  $(".mobile-link").click(function() {
+    $(".sd-nav").toggleClass("nav-open");
+  });
+  $(".sd-nav--mobile-link").click(function() {
+    $(".sd-nav").toggleClass("nav-open");
   });
 });

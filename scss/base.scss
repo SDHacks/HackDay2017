@@ -91,7 +91,7 @@ a {
     color: $BLUE_1;
 
     @media screen and (max-width: $BP_MD) {
-      margin-top: 50px;
+      margin-top: 60px;
     }
   }
   &--subheader {
@@ -101,7 +101,7 @@ a {
   }
   p, 
   li {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 1.4;
   }
 }
@@ -173,5 +173,36 @@ a {
   }
   @media screen and (max-width: $BP_MD) {
     width: 7rem;
+  }
+}
+.sd-header--small {
+  font-size: 42px;
+  line-height: 0;
+  margin: 0;
+}
+// #resources .row>div {
+//   @media screen and (max-width: $BP_MD) {
+//     max-width: 500px;
+//     margin: 30px auto;
+//     float: none;
+//   }
+// }
+.sd-link-top {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  color: $BLUE_1;
+  z-index: 4;
+  border: none;
+  text-align: center;
+
+  i {
+    font-size: 48px;
+  }
+  @media screen and (max-width: $BP_XL) {
+    color: white;
+    position: absolute;
+    bottom: 28px;
+    left: 10px;
   }
 }

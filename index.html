@@ -7,33 +7,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/foundation.min.css" />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.css" integrity="sha256-NqI559iHqiWe5VxDi9mXE8i83ghn8Ru8BINyiPN7lDg=" crossorigin="anonymous" /> -->
+  <link rel="shortcut icon" href="images/logo.png">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.js" integrity="sha256-6Po73qUOfEfrvKtDy88HN0Xx6wjx3ZlngccJjsIVpIg=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="off-canvas-wrapper wrapper">
     <div class="off-canvas-wrapper-inner wrapper--inner">
       <!-- TODO: add fixed nav bar -->
-<!--       <div class="sd-nav sd-nav--fixed">
-        <ul class="sd-nav--list">
-          <a href="#about"><li>About</li></a>
-          <a href="#resources"><li>Resources</li></a>
-          <a href="#schedule"><li>Schedule</li></a>
-          <a href="#faq"><li>FAQ</li></a>
-          <li class="sd-nav--cta"><a href="" class="sd-button button">Apply</a></li>
-        </ul>
-      </div> -->
-
-      <div class="sd-nav sd-nav--static">
-        <ul class="sd-nav--list">
-          <a href="#about"><li>About</li></a>
-          <a href="#resources"><li>Resources</li></a>
-          <a href="#schedule"><li>Schedule</li></a>
-          <a href="#faq"><li>FAQ</li></a>
-          <li class="sd-nav--cta"><a href="" class="sd-button button">Apply</a></li>
-        </ul>
+      <div class="sd-nav sd-nav--fixed">
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="sd-nav--content">
+              <img class="sd-section--header sd-nav--logo" src="images/logo.png">
+              <h3 class="sd-section--header sd-nav--header">Hack Day</h3>
+              <ul class="sd-nav--list">
+                <a href="#about"><li>About</li></a>
+                <a href="#resources"><li>Resources</li></a>
+                <a href="#schedule"><li>Schedule</li></a>
+                <a href="#faq"><li>FAQ</li></a>
+                <li class="sd-nav--cta"><a href="" class="sd-button button">Apply</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+
+<!--       <div class="sd-nav sd-nav--static">
+        <div class="row">
+          <div class="small-12 columns">
+            <ul class="sd-nav--list">
+              <a href="#about"><li>About</li></a>
+              <a href="#resources"><li>Resources</li></a>
+              <a href="#schedule"><li>Schedule</li></a>
+              <a href="#faq"><li>FAQ</li></a>
+              <li class="sd-nav--cta"><a href="" class="sd-button button">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
 
       <!-- Hero section -->
       <div class="sd-section sd-hero--wrap" id="hero">        
@@ -63,7 +79,7 @@
             </p>
             <h3 class="sd-section--subheader">Where At?</h3>
             <p>
-              This hack day will be held in the Qualcomm Room in Jacobs Hall
+              This hack day will be held in the Qualcomm Room in Jacobs Hall.
             </p>
           </div>
           <div class="small-12 medium-6 large-5 columns sd-hextion sd-hextion--right sd-hextion--shifted">
@@ -219,13 +235,19 @@
               <li>
                 <h3 class="sd-section--subheader">What should I bring?</h3>
                 <p>
-                  Bring your student ID, computer, any external peripherals you may need (chargers, monitors, etc.), any other hardware that you definitely plan on using, and an open mind. 
+                  Bring your student ID, computer, any peripherals you may need (chargers, monitors, etc.), any hardware that you plan on using, and an open mind. 
                 </p>
               </li>
               <li>
                 <h3 class="sd-section--subheader">What if I don't have a team?</h3>
                 <p>
-                  We allow teams of up to four hackers. Though we recommend signing up with your team, don't worry if you don't have one set because we'll have a team formation session in the beginning!
+                  We allow teams of up to four hackers. Though we recommend signing up with your team, don't worry if you don't have one beforehand because we'll have a team formation session in the beginning!
+                </p>
+              </li>
+              <li>
+                <h3 class="sd-section--subheader">Are there any rules?</h3>
+                <p>
+                  As a Major League Hacking member event, we are adopting Major League Hacking’s <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a> which requires you to respect others and help us keep SD Hacks a safe space for everyone. If you want your project to be considered for an award, you may only submit work that your team wrote during the hackathon.
                 </p>
               </li>
             </ul>
@@ -288,14 +310,14 @@
         <div class="row sd-footer">
           <div class="sd-footer--background"></div>
           <div class="sd-footer--hex"></div>
+          <div class="sd-footer--background-helper"></div>
           <div class="sd-footer--links">
             <ul class="sd-footer--list">
-              <li><a>Facebook</a></li>
-              <li><a>Twitter</a></li>
+              <li><a><i class="fa fa-facebook-square"></i></a></li>
+              <li><a><i class="fa fa-twitter-square"></i></a></li>
             </ul>
           </div>
-          <div class="sd-footer--background-helper"></div>
-          <div class="small-12 medium-offset-6 medium-4 columns sd-footer--info">
+          <div class="sd-footer--info">
             <img class="tesc-logo" src="images/tesc_white.svg" />
           </div>
         </div>
@@ -303,5 +325,7 @@
       </div>
     </div>
   </div>
+
+  <!-- TODO: add analytics -->
 </body>
 </html>

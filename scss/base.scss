@@ -351,6 +351,10 @@ a {
 
     background-color: $PURPLE_1;
     clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+
+    @media screen and (max-width: $BP_MD) {
+      clip-path: polygon(-50% 100%, 100% 0, 100% 100%, 0 100%);
+    }
   }
   &--background-helper {
     position: absolute;
@@ -374,11 +378,12 @@ a {
   &--info {
     position: relative;
     z-index: 1;
-    height: 50px;
+    // height: 50px;
   }
   &--links {
     z-index: 2;
     text-align: center;
+    position: relative;
   }
   &--list {
     list-style-type: none;
@@ -388,6 +393,15 @@ a {
     li {
       padding: 10px;
       display: inline-block;
+
+      a {
+        color: white;
+        font-size: 32px;
+
+        &:hover {
+          color: $BLUE_1;
+        }
+      }
     }
   }
 }
@@ -401,11 +415,51 @@ a {
   z-index: 1;
 }
 .tesc-logo {
-  width: 12rem;
-  margin: auto;
+  width: 8.5rem;
+  margin: 2rem auto;
   display: block;
+
+  @media screen and (min-width: $BP_MD) {
+    position: absolute;
+    right: 50px;
+    top: -50px;
+    margin: 0;
+  }
+  @media screen and (max-width: $BP_MD) {
+    width: 7rem;
+  }
 }
 .sd-nav {
+  .row {
+    @media screen and (min-width: $BP_XL) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+      max-width: 90rem;
+    }
+  }
+  &--content {
+    position: relative;
+  }
+  &--logo {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    margin: 10px 10px 10px 0;
+    width: auto;
+  }
+  &--header {
+    font-size: 28px;
+    display: inline;
+    position: absolute;
+    left: 60px;
+    line-height: 70px;
+    color: $PURPLE_1;
+  }
+  &--cta:hover {
+    border-bottom: none !important;
+  }
   &--list {
     list-style-type: none;
     line-height: 40px;
@@ -416,10 +470,16 @@ a {
       display: inline-block;
       margin: 10px 14px;
       font-size: 120%;
-      border-bottom: 2px solid;
+      // border-bottom: 3px solid;
 
       &:last-of-type {
-        border-bottom: none;
+        // border-bottom: none !important;
+      }
+      &.active {
+        border-bottom: 3px solid;
+      }
+      &:hover {
+        border-bottom: 3px solid;
       }
     }
     &>a {

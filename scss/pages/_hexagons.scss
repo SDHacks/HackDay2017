@@ -1,0 +1,121 @@
+// Hexagon stuff
+.sd-hextion {
+  height: 1100px;
+  color: white;
+  background: url("../images/side-hexagons.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  @media screen and (max-width: $BP_MD) {
+    background: $PURPLE_1;
+    height: auto;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  }
+
+  &--shifted {
+    margin-top: -250px;
+    margin-bottom: -250px;
+
+    @media screen and (max-width: $BP_MD) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  &--right {
+    @media screen and (min-width: $BP_XL) {
+      position: relative;
+      left: 6.2rem;
+      padding-right: 20px;
+    }
+  }
+  &--left {
+    background-position: 103% 0;
+
+    @media screen and (min-width: $BP_XL) {
+      background-position: 103% 0;
+      position: relative;
+      left: -6.2rem;
+      padding-left: 35px;
+    }
+  }
+  &--content {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media screen and (min-width: $BP_MD) {
+      margin: 35px 0 0 45px;
+    }
+    p {
+      font-size: 26px;
+    }
+  }
+  &--left &--content {
+    @media screen and (min-width: $BP_MD) {
+    margin: 35px 45px 0 0;
+  }
+  }
+  &--header {
+    text-align: center;
+    font-size: 2.25em;
+  }
+  .button {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+.sd-hex {
+  background: url("../images/hexagon_rounded.svg");
+  background-size: cover;
+  width: 274px;
+  height: 301px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+
+  @media screen and (max-width: $BP_LG) {
+    width: 206px;
+    height: 226px;
+  }
+
+  &--unbordered {
+    background: url("../images/hexagon_unbordered.svg");
+    background-size: cover;
+  }
+  &--inset {
+    margin-top: 100px;
+
+    @media screen and (max-width: $BP_LG) {
+      margin-top: 130px;
+    }
+  }
+
+  h2 {
+    font-size: 96px;
+    line-height: 86px;
+    margin: 12px 0 0 0;
+  }
+  p {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+.sd-list-hex {
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $BP_MD) {
+    // width: 274px;
+    // height: 301px;
+  }
+}

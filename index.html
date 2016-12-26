@@ -5,17 +5,76 @@
   <title>Hack Day 2017</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.css" integrity="sha256-NqI559iHqiWe5VxDi9mXE8i83ghn8Ru8BINyiPN7lDg=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/foundation.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.css" integrity="sha256-NqI559iHqiWe5VxDi9mXE8i83ghn8Ru8BINyiPN7lDg=" crossorigin="anonymous" /> -->
+  <link rel="shortcut icon" href="images/logo.png">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.js" integrity="sha256-6Po73qUOfEfrvKtDy88HN0Xx6wjx3ZlngccJjsIVpIg=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="off-canvas-wrapper wrapper">
     <div class="off-canvas-wrapper-inner wrapper--inner">
+      <!-- TODO: add fixed nav bar -->
+      <div class="sd-nav sd-nav--fixed">
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="sd-nav--content">
+              <a href="/">
+                <img class="sd-nav--logo" src="images/logo.png">
+                <h3 class="sd-nav--header">Hack Day</h3>
+              </a>
+              <ul class="sd-nav--list show-for-large">
+                <a href="#about"><li>About</li></a>
+                <a href="#resources"><li>Resources</li></a>
+                <a href="#schedule"><li>Schedule</li></a>
+                <a href="#faq"><li>FAQ</li></a>
+                <li class="sd-nav--cta"><a href="" class="sd-button button">Apply</a></li>
+              </ul>
+
+              <a class="mobile-link hide-for-large">
+                <span class="mobile-hamburger"></span>
+              </a>
+              <div class="navigation nav-right">
+                <ul>
+                  <li>
+                    <a class="sd-nav--mobile-link" href="#about">About</a>
+                  </li>
+                  <li>
+                    <a class="sd-nav--mobile-link" href="#resources">Resources</a>
+                  </li>
+                  <li>
+                    <a class="sd-nav--mobile-link" href="#schedule">Schedule</a>
+                  </li>
+                  <li>
+                    <a class="sd-nav--mobile-link" href="#faq">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--       <div class="sd-nav sd-nav--static">
+        <div class="row">
+          <div class="small-12 columns">
+            <ul class="sd-nav--list">
+              <a href="#about"><li>About</li></a>
+              <a href="#resources"><li>Resources</li></a>
+              <a href="#schedule"><li>Schedule</li></a>
+              <a href="#faq"><li>FAQ</li></a>
+              <li class="sd-nav--cta"><a href="" class="sd-button button">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
 
       <!-- Hero section -->
-      <div class="sd-section sd-hero--wrap">
+      <div class="sd-section sd-hero--wrap" id="hero">        
         <div class="sd-white-bg row">
           <div class="sd-hero ">
             <div class="small-12 sd-hero--content columns">
@@ -33,27 +92,27 @@
       </div>
 
       <!-- First info section -->
-      <div class="sd-section">
-        <div class="row sd-white-bg">
-          <div class="small-12 medium-6 large-7 columns sd-section">
+      <div class="sd-section sd-z1" id="about">
+        <div class="row sd-white-bg sd-pad-top">
+          <div class="small-12 medium-6 large-7 columns sd-section sd-section--content">
             <h2 class="sd-section--header">About</h2>
             <p>
-              For one weekend every year, SD Hacks turns San Diego into the hack capital of the world. This year, SD Hacks is going to bring you the dankest experience. It's time to build that cool application, robot, or whatever you've always wanted to build.
+              Last September, SD Hacks brought over 800 hackers from all over California. With Hack Days, we plan to expand our reach to hackers old and new at UCSD and focus on providing the best environment, workshops, and mentorship possible. It's time to team up (if you want) and build that cool application, robot, or whatever you've always wanted to build.
             </p>
             <h3 class="sd-section--subheader">Where At?</h3>
             <p>
-              This hack day will be held in the Qualcomm Room in Jacobs Hall
+              This Hack Day will be held in the Qualcomm Room in Jacobs Hall.
             </p>
           </div>
           <div class="small-12 medium-6 large-5 columns sd-hextion sd-hextion--right sd-hextion--shifted">
             <div class="sd-hex sd-hex--inset">
-              <h2>1.2k</h2>
-              <p>Hackers</p>
+              <h2>1.5k</h2>
+              <p>Total Hackers</p>
             </div>
             <div class="sd-hextion--content">
-              <h2 class="sd-hextion--header">Last Year:</h2>
+              <h2 class="sd-hextion--header">SD Hacks Recap:</h2>
               <p>
-                Last year, SD Hacks brought over 800 students from all over California to build great things.
+                So far, SD Hacks has influenced well over a thousand hackers from across California (and beyond!). With Hack Days, we plan on focusing on mentorship and learning for hackers old and new.
               </p>
             </div>
           </div>
@@ -61,44 +120,44 @@
       </div>
 
       <!-- Second (split content) info section -->
-      <div class="sd-section">
+      <div class="sd-section" id="resources">
         <div class="row sd-white-bg">
-          <div class="small-12 columns">
+          <div class="medium-12 columns">
             <h2 class="sd-section--header">Resources</h2>
           </div>
           <div class="sd-section--tile medium-4 columns">
-            <div class="sd-hex sd-hex--unbordered">
-              <h2>1.2k</h2>
-              <p>Hackers</p>
+            <div class="sd-hex sd-list-hex sd-hex--unbordered" id="sd-hex-workshops">
+              <h2>3</h2>
+              <p>Workshops</p>
             </div>
             <div class="sd-section--tile-content">
-              <h3 class="sd-section--subheader">Virtual Reality</h3>
+              <h3 class="sd-section--subheader">Workshops</h3>
               <p>
-                We will provide HTC Vives, Oculus Rifts, and VR-ready PC's for Virtual Reality developers!
+                We'll feature workshops on introductory web development, design, and data science.
               </p>
             </div>
           </div>
           <div class="sd-section--tile medium-4 columns">
-            <div class="sd-hex sd-hex--unbordered">
-              <h2>1.2k</h2>
-              <p>Hackers</p>
+            <div class="sd-hex sd-list-hex sd-hex--unbordered" id="sd-hex-mentors">
+              <h2>5 <span class="sd-header--small">to</span> 1</h2>
+              <p>Hacker : Mentor Ratio</p>
             </div>
             <div class="sd-section--tile-content">
-              <h3 class="sd-section--subheader">Virtual Reality</h3>
+              <h3 class="sd-section--subheader">Much Mentorship</h3>
               <p>
-                We will provide HTC Vives, Oculus Rifts, and VR-ready PC's for Virtual Reality developers!
+                We'll have mentors available day and night with knowledge and tips to help you out.
               </p>
             </div>
           </div>
           <div class="sd-section--tile medium-4 columns">
-            <div class="sd-hex sd-hex--unbordered">
-              <h2>1.2k</h2>
+            <div class="sd-hex sd-list-hex sd-hex--unbordered" id="sd-hex-hackers">
+              <h2>60</h2>
               <p>Hackers</p>
             </div>
             <div class="sd-section--tile-content">
-              <h3 class="sd-section--subheader">Virtual Reality</h3>
+              <h3 class="sd-section--subheader">A Tight-Knit Hackathon</h3>
               <p>
-                We will provide HTC Vives, Oculus Rifts, and VR-ready PC's for Virtual Reality developers!
+                We're hand-picking some of the most passionate and eager to learn developers and designers.
               </p>
             </div>
           </div>
@@ -125,7 +184,7 @@
               </ul>
             </div>
           </div>
-          <div class="small-12 medium-6 large-7 columns sd-section sd-schedule">
+          <div class="small-12 medium-6 large-7 columns sd-section sd-schedule sd-section--content" id="schedule">
             <h2 class="sd-section--header">Schedule</h2>
             <h3 class="sd-section--subheader">Friday 1/13</h3>
             <ul class="sd-list sd-schedule--list">
@@ -178,39 +237,51 @@
       </div>
 
       <!-- FAQ section -->
-      <div class="sd-section">
+      <div class="sd-section" id="faq">
         <div class="row sd-white-bg">
-          <div class="small-12 medium-6 large-7 columns sd-section sd-schedule">
+          <div class="small-12 medium-6 large-7 columns sd-section sd-section--content">
             <h2 class="sd-section--header">FAQ</h2>
             <ul class="sd-list sd-faq--list">
               <li>
-                <h3 class="sd-section--subheader">Where At?</h3>
+                <h3 class="sd-section--subheader">What's Hack Day?</h3>
                 <p>
-                  This Hack Day will be held in the Qualcomm Room in Jacobs Hall
+                  Hack day is a smaller, 24-hour UCSD only hackathon hosted by SD Hacks focused on mentorship, learning, and shipping cool projects.
                 </p>
               </li>
               <li>
-                <h3 class="sd-section--subheader">Where At?</h3>
+                <h3 class="sd-section--subheader">Where and When?</h3>
                 <p>
-                  This Hack Day will be held in the Qualcomm Room in Jacobs Hall
+                  This Hack Day will be held in the Qualcomm Room in Jacobs Hall. Plan on arriving at 5:00 PM Friday and departing 6:30 PM Saturday. 
                 </p>
               </li>
               <li>
-                <h3 class="sd-section--subheader">Where At?</h3>
+                <h3 class="sd-section--subheader">What should I bring?</h3>
                 <p>
-                  This Hack Day will be held in the Qualcomm Room in Jacobs Hall
+                  Bring your student ID, computer, any peripherals you may need (chargers, monitors, etc.), any hardware that you plan on using, and an open mind. 
                 </p>
               </li>
               <li>
-                <h3 class="sd-section--subheader">Where At?</h3>
+                <h3 class="sd-section--subheader">What if I don't have a team?</h3>
                 <p>
-                  This Hack Day will be held in the Qualcomm Room in Jacobs Hall
+                  We allow teams of up to four hackers. Though we recommend signing up with your team, don't worry if you don't have one beforehand because we'll have a team formation session in the beginning!
+                </p>
+              </li>
+              <li>
+                <h3 class="sd-section--subheader">Are there any rules?</h3>
+                <p>
+                  As a Major League Hacking member event, we are adopting Major League Hacking’s <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a> which requires you to respect others and help us keep SD Hacks a safe space for everyone. If you want your project to be considered for an award, you may only submit work that your team wrote during the hackathon.
+                </p>
+              </li>
+              <li>
+                <h3 class="sd-section--subheader">Have an unanswered question?</h3>
+                <p>
+                  Feel free to email us at <a href="mailto:hello@sdhacks.io">hello@sdhacks.io</a>
                 </p>
               </li>
             </ul>
 
           </div>
-          <div class="small-12 medium-6 large-5 columns sd-hextion sd-hextion--right sd-hextion--shifted">
+          <div class="small-12 medium-6 large-5 columns sd-hextion sd-hextion--right">
             <div class="sd-hex sd-hex--inset">
               <h2>??</h2>
               <p>Volunteers</p>
@@ -218,15 +289,9 @@
             <div class="sd-hextion--content">
               <h2 class="sd-hextion--header">Wanna help out?</h2>
               <p>
-                If you're interested in helping out or mentoring, click this button:
+                If you're interested in helping out or mentoring, volunteer through here:
               </p>
-              <a class="button sd-button success">Volunteer</a>
-
-              <h2 class="sd-hextion--header">Question not answered?</h2>
-              <p>
-                Please email us at
-                <a href="mailto:hello@sdhacks.io">hello@sdhacks.io</a>
-              </p>
+              <p><a class="button sd-button success">Volunteer</a></p>
             </div>
           </div>
         </div>
@@ -262,13 +327,24 @@
         </div>
       </div> -->
 
+      <a class="sd-link-top" href="#hero">
+        <i class="fa fa-arrow-circle-up"></i><br>
+        Top
+      </a>
+
       <!-- Footer -->
       <div class="sd-section">
         <div class="row sd-footer">
           <div class="sd-footer--background"></div>
           <div class="sd-footer--hex"></div>
           <div class="sd-footer--background-helper"></div>
-          <div class="small-12 medium-offset-9 medium-2 columns sd-footer--info">
+          <div class="sd-footer--links">
+            <ul class="sd-footer--list">
+              <li><a><i class="fa fa-facebook-square"></i></a></li>
+              <li><a><i class="fa fa-twitter-square"></i></a></li>
+            </ul>
+          </div>
+          <div class="sd-footer--info">
             <img class="tesc-logo" src="images/tesc_white.svg" />
           </div>
         </div>
@@ -276,5 +352,7 @@
       </div>
     </div>
   </div>
+
+  <!-- TODO: add analytics -->
 </body>
 </html>

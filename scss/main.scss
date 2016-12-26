@@ -1,4 +1,13 @@
 // Please do not write styles here
 
+// Base
 @import './globals';
 @import './base';
+
+// Pages
+@import './pages/_hero';
+@import './pages/_hexagons';
+@import './pages/_footer';
+@import './pages/_header';
+
+// Custom/mobile

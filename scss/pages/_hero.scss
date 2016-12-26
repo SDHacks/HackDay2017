@@ -1,0 +1,74 @@
+// Hero
+.sd-hero {
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: $PURPLE_1;
+  min-height: 112vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  margin-bottom: 4vh;
+  background: linear-gradient(rgba(78, 56, 99, 0.8), rgba(78, 56, 99, 0.8)),
+              url("../images/hero.jpg") center center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: none !important;
+
+  @media screen and (max-width: $BP_MD) {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  &--wrap {
+    min-height: 112vh;
+    max-width: none !important;
+
+    .sd-white-bg {
+      min-height: 112vh;
+    }
+  }
+  &--content {
+    position: relative;
+    top: -6vh;
+
+    @media screen and (max-width: $BP_MD) {
+      top: 0;
+      padding-bottom: 15vh;
+    }
+  }
+  &--title {
+    font-size: 72px;
+    letter-spacing: 1px;
+
+    @media screen and (max-width: $BP_MD) {
+      font-size: 64px;
+      margin-bottom: 0;
+    }
+  }
+  &--subtitle {
+    font-family: $SOURCE_SANS;
+    font-size: 44px;
+    letter-spacing: 1.67px;
+
+    @media screen and (max-width: $BP_MD) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  &--logo {
+    max-width: 224px;
+    margin-bottom: 20px;
+  }
+  .sd-button {
+    margin: 6px 10px;
+
+    @media screen and (max-width: $BP_MD) {
+      width: 80%;
+    }
+  }
+}

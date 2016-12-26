@@ -20,6 +20,14 @@ h3,
 h4 {
   font-family: $REEM_KUFI;
 }
+a {
+  color: $BLUE_1;
+  border-bottom: 2px solid;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
 .sd-white-bg {
   background-color: $WHITE;
 }
@@ -50,80 +58,6 @@ h4 {
     }
   }
 }
-// Hero
-.sd-hero {
-  text-align: center;
-  width: 100%;
-  color: white;
-  background-color: $PURPLE_1;
-  min-height: 112vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  margin-bottom: 4vh;
-  background: linear-gradient(rgba(78, 56, 99, 0.7), rgba(78, 56, 99, 0.7)), url("https://images.unsplash.com/photo-1474905187624-b3deaf7aa4c2") center center;
-  background-size: cover;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  max-width: none !important;
-
-  @media screen and (max-width: $BP_MD) {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  }
-  &--wrap {
-    min-height: 112vh;
-    max-width: none !important;
-
-    .sd-white-bg {
-      min-height: 112vh;
-    }
-  }
-  &--content {
-    position: relative;
-    top: -6vh;
-
-    @media screen and (max-width: $BP_MD) {
-      top: 0;
-      padding-bottom: 15vh;
-    }
-  }
-  &--title {
-    font-size: 72px;
-    letter-spacing: 1px;
-
-    @media screen and (max-width: $BP_MD) {
-      font-size: 64px;
-      margin-bottom: 0;
-    }
-  }
-  &--subtitle {
-    font-family: $SOURCE_SANS;
-    font-size: 44px;
-    letter-spacing: 1.67px;
-
-    @media screen and (max-width: $BP_MD) {
-      font-size: 30px;
-      line-height: 40px;
-    }
-  }
-  &--logo {
-    max-width: 224px;
-    margin-bottom: 20px;
-  }
-  .sd-button {
-    margin: 6px 10px;
-
-    @media screen and (max-width: $BP_MD) {
-      width: 80%;
-    }
-  }
-}
-
 // Overall styles
 .sd-section {
   position: relative;
@@ -143,10 +77,22 @@ h4 {
       padding-top: 75px;
     }
   }
+  &--content {
+    @media screen and (min-width: $BP_LG) {
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
   &--header {
     font-size: 54px;
     letter-spacing: 1.5px;
     color: $BLUE_1;
+
+    @media screen and (max-width: $BP_MD) {
+      margin-top: 60px;
+    }
   }
   &--subheader {
     font-size: 36px;
@@ -155,7 +101,7 @@ h4 {
   }
   p, 
   li {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 1.4;
   }
 }
@@ -164,6 +110,9 @@ h4 {
   margin-left: 0;
 }
 .sd-schedule {
+  @media screen and (min-width: $BP_LG) {
+    margin-top: 8rem;
+  }
   &--list {
     font-family: $REEM_KUFI;
     letter-spacing: 1px;
@@ -178,6 +127,7 @@ h4 {
   &--list-time {
     font-weight: bold;
     position: absolute;
+    color: $PURPLE_1;
     left: 0;
   }
   &--list-content {
@@ -204,138 +154,55 @@ h4 {
     }
   }
 }
-// Hexagon stuff
-.sd-hextion {
-  height: 1100px;
-  color: white;
-  background: url("../images/side-hexagons.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-
-  &--shifted {
-    margin-top: -250px;
-    margin-bottom: -250px;
-
-    @media screen and (max-width: $BP_MD) {
-      margin-top: -100px;
-      margin-bottom: -100px;
-      // Remove soft corner
-      background-position: -30px 0;
-    }
-  }
-  &--right {
-    @media screen and (min-width: $BP_XL) {
-      position: relative;
-      left: 6.2rem;
-      padding-right: 10px;
-    }
-  }
-  &--left {
-    background-position: -595px 0;
-
-    @media screen and (min-width: $BP_XL) {
-      background-position: -540px 0;
-      position: relative;
-      left: -6.2rem;
-      padding-left: 10px;
-    }
-  }
-  &--content {
-    @media screen and (min-width: $BP_MD) {
-      margin: 35px 0 0 45px;
-    }
-    p {
-      font-size: 1.8em;
-    }
-  }
-  &--left &--content {
-    @media screen and (min-width: $BP_MD) {
-    margin: 35px 45px 0 0;
-  }
-  }
-  &--header {
-    text-align: center;
-    font-size: 2.25em;
-  }
-  .button {
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-  }
+.sd-pad-top {
+  padding-top: 4vh;
 }
-.sd-hex {
-  background: url("../images/hexagon_rounded.svg");
-  background-size: cover;
-  width: 274px;
-  height: 301px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  margin: 0 auto;
+.sd-z1 {
+  z-index: 1;
+}
+.tesc-logo {
+  width: 8.5rem;
+  margin: 2rem auto;
+  display: block;
 
-  &--unbordered {
-    background: url("../images/hexagon_unbordered.svg");
-    background-size: cover;
-  }
-  &--inset {
-    margin-top: 100px;
-  }
-
-  h2 {
-    font-size: 96px;
-    line-height: 86px;
-    margin: 12px 0 0 0;
-  }
-  p {
-    font-size: 24px;
+  @media screen and (min-width: $BP_MD) {
+    position: absolute;
+    right: 50px;
+    top: -50px;
     margin: 0;
   }
-}
-// Footer
-.sd-footer {
-  position: relative;
-  height: 350px;
-  margin-top: -250px;
-  padding-top: 250px;
-
-  &--background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    background-color: $PURPLE_1;
-    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
-  }
-  &--background-helper {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    height: 100px;
-    background-color: $WHITE;
-    z-index: -1;
-  }
-  &--hex {
-    background-image: url("../images/logo.png");
-    background-size: cover;
-    height: 246px;
-    width: 225px;
-    position: absolute;
-    top: -40px;
-    right: 50px;
-    z-index: 1;
-  }
-  &--info {
-    position: relative;
-    z-index: 1;
-    height: 50px;
+  @media screen and (max-width: $BP_MD) {
+    width: 7rem;
   }
 }
-.sd-spacer--footer {
-  height: 200px;
+.sd-header--small {
+  font-size: 42px;
+  line-height: 0;
+  margin: 0;
+}
+// #resources .row>div {
+//   @media screen and (max-width: $BP_MD) {
+//     max-width: 500px;
+//     margin: 30px auto;
+//     float: none;
+//   }
+// }
+.sd-link-top {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  color: $BLUE_1;
+  z-index: 4;
+  border: none;
+  text-align: center;
+
+  i {
+    font-size: 48px;
+  }
+  @media screen and (max-width: $BP_XL) {
+    color: white;
+    position: absolute;
+    bottom: 28px;
+    left: 10px;
+  }
 }

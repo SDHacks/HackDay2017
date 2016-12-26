@@ -69,6 +69,9 @@
     top: 0;
     z-index: 2;
     text-align: right;
+    -webkit-transition: background-color 0.5s ease; /* Safari */
+    -moz-transition: background-color 0.5s ease; /* Safari */
+    transition: background-color 0.5s ease;
   }
   &--static {
     color: white;
@@ -82,6 +85,7 @@
     font-size: inherit;
     margin-bottom: 0;
   }
+
 }
 
 /* Defines the breakpoint at which the nav will collapse */
@@ -234,4 +238,24 @@ $NAV_BODYBG: $WHITE;
 }
 .hidden {
   display: none;
+}
+.sd-nav--top:not(.nav-open) {
+  background-color: transparent;
+  box-shadow: none;
+
+  .sd-nav--logolink {
+    opacity: 0;
+  }
+  .sd-nav--list,
+  .sd-nav--header {
+    color: $WHITE;
+  }
+  .mobile-hamburger {
+    border-color: $WHITE;
+
+    &:before,
+    &:after {
+      border-color: $WHITE;
+    }
+  }
 }

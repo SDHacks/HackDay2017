@@ -10,9 +10,11 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     scrolled();
+    return true;
   });
   $(window).bind('touchmove', function() {
     scrolled();
+    return true;
   });
 
   $(".mobile-link").click(function() {
@@ -27,10 +29,8 @@ function scrolled() {
   var toTop = $(window).scrollTop();
 
   if (toTop > 0) {
-    // $(".sd-nav--fixed").fadeIn();
     $(".sd-nav--fixed").removeClass("sd-nav--top");
   } else {
-    // $(".sd-nav--fixed").fadeOut();
     $(".sd-nav--fixed").addClass("sd-nav--top");
   }
 

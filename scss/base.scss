@@ -58,6 +58,52 @@ a {
       background-color: $GREEN_1;
     }
   }
+  &--input {
+    text-align: left;
+    text-transform: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $BLUE_1;
+
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &:focus {
+      background-color: $WHITE;
+      color: $BLUE_1;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $BLUE_1;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $BLUE_1;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $BLUE_1;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $BLUE_1;
+      }
+    }
+  }
 }
 // Overall styles
 .sd-section {

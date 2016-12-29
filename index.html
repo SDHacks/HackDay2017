@@ -10,10 +10,6 @@
   <link rel="shortcut icon" href="images/logo.png">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="js/scroll.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.js" integrity="sha256-6Po73qUOfEfrvKtDy88HN0Xx6wjx3ZlngccJjsIVpIg=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="off-canvas-wrapper wrapper">
@@ -97,7 +93,13 @@
                 So far, SD Hacks has influenced well over a thousand hackers from across California (and beyond!). Hear about our latest email updates here:
               </p>
               <p>
-                <input class="button sd-button sd-button--input" placeholder="Get Updates!">
+                <form id="update_signup" action="//sdhacks.us9.list-manage.com/subscribe/post?u=2b76757d9b200f72632d7330a&amp;amp;id=c99e3caa24" method="post" target="_blank" novalidate="novalidate" class="subscribe">
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_2b76757d9b200f72632d7330a_c99e3caa24" tabindex="-1" value=""/>
+                  </div>
+                  <input id="sdhx-email" type="email" value="" name="EMAIL" placeholder="Email" required="required" class="subscribe__email"/>
+                  <input id="sdhx-subscribe" type="submit" name="subscribe" value="Get Updates!" class="subscribe__button"/>
+                </form>
               </p>
             </div>
           </div>
@@ -265,5 +267,10 @@
   </div>
 
   <!-- TODO: add analytics -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <script type="text/javascript" src="js/subscribe.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.js" integrity="sha256-6Po73qUOfEfrvKtDy88HN0Xx6wjx3ZlngccJjsIVpIg=" crossorigin="anonymous"></script>
 </body>
 </html>

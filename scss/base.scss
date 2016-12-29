@@ -239,7 +239,7 @@ a {
   position: fixed;
   bottom: 50px;
   left: 50px;
-  color: $white;
+  color: $WHITE;
   z-index: 4;
   border: none;
   display: none;
@@ -249,7 +249,7 @@ a {
     font-size: 48px;
   }
   @media screen and (max-width: $BP_MD) {
-    color: $white;
+    color: $WHITE;
   }
   @media screen and (max-width: $BP_XL) {
     position: absolute;

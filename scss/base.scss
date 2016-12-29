@@ -104,6 +104,10 @@ a {
       }
     }
   }
+
+  &--short {
+    line-height: 45px;
+  }
 }
 // Overall styles
 .sd-section {
@@ -242,7 +246,7 @@ a {
   position: fixed;
   bottom: 50px;
   left: 50px;
-  color: $BLUE_1;
+  color: #fff;
   z-index: 4;
   border: none;
   display: none;

@@ -5,6 +5,7 @@
   color: white;
   background-color: $PURPLE_1;
   min-height: 112vh;
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,10 +31,12 @@
   }
   &--wrap {
     min-height: 112vh;
+    height: 700px;
     max-width: none !important;
 
     .sd-white-bg {
       min-height: 112vh;
+      height: 700px;
     }
     @media screen and (max-width: $BP_MD) {
       height: auto;

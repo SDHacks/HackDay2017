@@ -41,7 +41,7 @@
   }
   &--info {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     // height: 50px;
   }
   &--links {
@@ -61,6 +61,7 @@
       a {
         color: white;
         font-size: 32px;
+        border: none;
 
         &:hover {
           color: $BLUE_1;

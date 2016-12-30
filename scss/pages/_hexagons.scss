@@ -78,7 +78,7 @@
     text-align: center;
     font-size: 2.25em;
   }
-  .button {
+  .button:not(.hidden) {
     display: block;
     margin: auto;
     margin-bottom: 10px;
@@ -151,5 +151,14 @@
     p {
       font-size: 20px;
     }
+  }
+}
+#updates-button,
+#updates-button-submit {
+  width: 260px;
+  transition: opacity 0.5s ease-in-out;
+
+  &.no-opacity {
+    display: none;
   }
 }

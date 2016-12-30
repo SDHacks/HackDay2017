@@ -114,9 +114,10 @@
               <p>
                 So far, SD Hacks has influenced well over a thousand hackers from across California (and beyond!). Hear about our latest email updates here:
               </p>
-              <p>
-                <input class="button sd-button sd-button--input" placeholder="Get Updates!">
-              </p>
+              <form id="updates-form" action="">
+                <input class="button sd-button sd-button--input" required id="updates-button" placeholder="Get Updates!">
+                <button class="button sd-button success no-opacity" id="updates-button-submit">Submit</button>
+              </form>
             </div>
           </div>
         </div>
@@ -349,12 +350,12 @@
           <div class="sd-footer--background-helper"></div>
           <div class="sd-footer--links">
             <ul class="sd-footer--list">
-              <li><a href="https://www.facebook.com/SDHacks/"><i class="fa fa-facebook-square"></i></a></li>
-              <li><a href="https://twitter.com/sdhacks"><i class="fa fa-twitter-square"></i></a></li>
+              <li><a target="_blank" href="https://www.facebook.com/SDHacks/"><i class="fa fa-facebook-square"></i></a></li>
+              <li><a target="_blank" href="https://twitter.com/sdhacks"><i class="fa fa-twitter-square"></i></a></li>
             </ul>
           </div>
           <div class="sd-footer--info">
-            <a class="tesc-logo" href="http://tesc.ucsd.edu">
+            <a class="tesc-logo" target="_blank" href="http://tesc.ucsd.edu">
               <img src="images/tesc_white.svg" />
             </a>
           </div>

@@ -58,6 +58,56 @@ a {
       background-color: $GREEN_1;
     }
   }
+  &--input {
+    text-align: left;
+    text-transform: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $BLUE_1;
+
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $WHITE;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &:focus {
+      background-color: $WHITE;
+      color: $BLUE_1;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $BLUE_1;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $BLUE_1;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $BLUE_1;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $BLUE_1;
+      }
+    }
+  }
+
+  &--short {
+    line-height: 45px;
+  }
 }
 // Overall styles
 .sd-section {
@@ -185,18 +235,11 @@ a {
   line-height: 0;
   margin: 0;
 }
-// #resources .row>div {
-//   @media screen and (max-width: $BP_MD) {
-//     max-width: 500px;
-//     margin: 30px auto;
-//     float: none;
-//   }
-// }
 .sd-link-top {
   position: fixed;
   bottom: 50px;
   left: 50px;
-  color: $BLUE_1;
+  color: $WHITE;
   z-index: 4;
   border: none;
   display: none;
@@ -206,7 +249,7 @@ a {
     font-size: 48px;
   }
   @media screen and (max-width: $BP_MD) {
-    color: white;
+    color: $WHITE;
   }
   @media screen and (max-width: $BP_XL) {
     position: absolute;

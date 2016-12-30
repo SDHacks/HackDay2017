@@ -1,4 +1,5 @@
-var sectionIds = ["#about", "#resources", "#schedule", "#faq"];
+// var sectionIds = ["#about", "#resources", "#schedule", "#faq"];
+var sectionIds = ["#about", "#schedule", "#faq"];
 
 // Denotes top offset for more natural page location guidance in nav
 var TOTOP_OFFSET = 100;

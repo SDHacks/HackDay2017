@@ -1,55 +1,53 @@
 .subscribe {
-  $radius: 10px;
-
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 216px;
+  width: 260px;
   font-size: 24px;
   line-height: 54px;
-  border-radius: $radius; 
+  border-radius: $BUTTON_RADIUS; 
   color: $WHITE; 
   box-sizing: border-box; 
   height: 54px; 
   padding: 0 10px;
   cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $WHITE;
   position: relative;
   margin: auto;
 
-  &__email {
-    outline: none;
+  &--email {
     border: 0 !important;
     width: 100%;
     background: transparent !important;
-    font-size: 14px;
+    font-size: 22px;
     line-height: 24px;
     padding: 8px 31% 8px 8px;
-    font-size: 18px;
-    color: $BLACK;
+    color: $PURPLE_1;
+    font-family: $REEM_KUFI;
     margin: 10px;
     margin-left: -10px;
     box-shadow: none !important;
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: $BLACK;      
+      color: $PURPLE_1;
+      font-family: $REEM_KUFI;      
     }
     &::-moz-placeholder { /* Firefox 19+ */
-      color: $BLACK;      
+      color: $PURPLE_1;
+      font-family: $REEM_KUFI;      
     }
     &:-ms-input-placeholder { /* IE 10+ */
-      color: $BLACK;      
+      color: $PURPLE_1;
+      font-family: $REEM_KUFI;      
     }
     &:-moz-placeholder { /* Firefox 18- */
-      color: $BLACK;
+      color: $PURPLE_1;
+      font-family: $REEM_KUFI;
     }
   }
-
-  &__button {
+  &--button {
     cursor: pointer;
     border: 0;
-    outline: none;
     position: absolute;
     right: 0;
     min-width: 100%;
@@ -59,12 +57,20 @@
     height: 100%; 
     padding: 0;
     line-height: 54px;
-    border-radius: $radius;
-    font-family: "Reem Kufi",Helvetica,Arial,sans-serif;
+    border-radius: $BUTTON_RADIUS;
+    font-family: $REEM_KUFI;
     text-transform: uppercase;
 
     &:hover {
       background-color: $BLUE_1;
     }
+  }
+}
+#updates-email,
+#updates-subscribe {
+  min-width: 100%;
+
+  &.no-opacity {
+    display: none;
   }
 }

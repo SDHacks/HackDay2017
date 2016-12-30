@@ -31,7 +31,6 @@ a {
 .sd-white-bg {
   background-color: $WHITE;
 }
-// Todo: externalize these into different files
 // Button styles
 .sd-button {
   // Todo: semibold
@@ -48,14 +47,14 @@ a {
   // Override foundation button hover behavior
   &:hover,
   &:focus {
-    background-color: $BLUE_1;
+    background-color: lighten($BLUE_1, 10%);
   }
   &.success {
     background-color: $GREEN_1;
 
     &.success:hover,
     &.success:focus {
-      background-color: $GREEN_1;
+      background-color: lighten($GREEN_1, 10%);
     }
   }
   &--input {
@@ -148,8 +147,16 @@ a {
   }
   p, 
   li {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.4;
+
+    strong {
+      color: $PURPLE_1;
+      font-weight: bold;
+    }
+    @media screen and (max-width: $BP_MD) {
+      font-size: 22px;
+    }
   }
 }
 .sd-list {
@@ -173,6 +180,7 @@ a {
       margin-bottom: 14px;
       position: relative;
       height: 40px;
+      font-size: 26px;
     }
   }
   &--list-time {
@@ -215,7 +223,11 @@ a {
   width: 8.5rem;
   margin: 2rem auto;
   display: block;
+  border: none;
 
+  &:hover {
+    cursor: pointer;
+  }
   @media screen and (min-width: $BP_MD) {
     position: absolute;
     right: 50px;

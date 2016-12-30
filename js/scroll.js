@@ -25,15 +25,15 @@ $(document).ready(function() {
     $(".sd-nav").toggleClass("nav-open");
   });
 
-  // Get Updates form TODO: move this to other file
-  $("#updates-button, #updates-button-submit").focus(function(e) {
-    $("#updates-button").attr('placeholder', 'Enter Email');
-    $("#updates-button-submit").removeClass('no-opacity');
-  });
-  $("#updates-button, #updates-button-submit").focusout(function(e) {
-    $("#updates-button").attr('placeholder', 'Get Updates!');
-    // $("#updates-button-submit").addClass('no-opacity');
-  });
+  // // Get Updates form TODO: move this to other file
+  // $("#updates-button, #updates-button-submit").focus(function(e) {
+  //   $("#updates-button").attr('placeholder', 'Enter Email');
+  //   $("#updates-button-submit").removeClass('no-opacity');
+  // });
+  // $("#updates-button, #updates-button-submit").focusout(function(e) {
+  //   $("#updates-button").attr('placeholder', 'Get Updates!');
+  //   // $("#updates-button-submit").addClass('no-opacity');
+  // });
 });
 
 

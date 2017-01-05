@@ -5,6 +5,10 @@
   margin-top: -250px;
   padding-top: 250px;
 
+  @media screen and (max-width: $BP_MD) {
+    margin-top: -200px;
+  }
+
   &--background {
     width: 100%;
     height: 100%;
@@ -16,7 +20,7 @@
     clip-path: polygon(0 100%, 101% 0, 101% 100%, 0 100%);
 
     @media screen and (max-width: $BP_MD) {
-      clip-path: polygon(-100% 100%, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(-100% 40%, 100% 0, 100% 100%, 0 100%);
       height: 125%;
     }
   }
@@ -30,7 +34,7 @@
     z-index: -1;
   }
   &--hex {
-    background-image: url("../images/logo.png");
+    background-image: url("../images/logo.svg");
     background-size: cover;
     height: 246px;
     width: 225px;
@@ -38,6 +42,15 @@
     top: -40px;
     right: 50px;
     z-index: 1;
+
+    @media screen and (max-width: $BP_MD) {
+      width: 200px;
+      height: 220px;
+      position: relative;
+      left: calc(50% - 100px);
+      top: -310px;
+      margin-bottom: -250px;
+    }
   }
   &--info {
     position: relative;

@@ -34,8 +34,9 @@ a {
   font-size: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 0;
+  padding: 0 16px;
   border-radius: 10px;
+  border: none;
   background-color: $BLUE_1;
   font-family: $REEM_KUFI;
 
@@ -51,6 +52,10 @@ a {
     &.success:focus {
       background-color: lighten($GREEN_1, 10%);
     }
+  }
+  &--unfixed {
+    width: auto;
+    min-width: 216px;
   }
   &--input {
     text-align: left;
